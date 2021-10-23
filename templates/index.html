@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--A FastAPI based monitoring WebApp-->
+<html>
+    <head>
+
+        <title>
+            Monitoring Demo
+        </title>
+
+        <link href="{{ url_for('static', path='/styles/home.css') }}" rel="stylesheet" type="text/css"/>
+        <link rel="shortcut icon" type="image/png" href="{{ url_for('static' , path='/images/logo.png') }}"/>
+
+        <!--Getting the plotly JS library-->
+        <script src="{{ url_for('static', path='/js/ploty-latest-min.js') }}" type="text/javascript"></script>
+
+    </head>
+
+    <body>
+
+        <div id="chart"></div>
+        
+        <script>
+
+          var response; 
+
+          //This function gets the percentage free RAM from the server
+          function GetFreeRamPer(){
+              
+              var xhr = new XMLHttpRequest;
+              var queryString = "http:///cgi-bin/getfreemem.py";
+              xhr.open("GET", queryString, true);
+              xhr.send();
+              
+              xhr.onload = function(){
+                  response = parseFloat(xhr.responseText);
+              }
+              
+              return response;
+
+          }
+          
+          //This variable is used to configure the axes
+          var layout = {
+
+              width: 600,
+              height: 600,
+              yaxis:{
+                  title: "% Free RAM",
+                  range: [0, 100]
+              },
+              xaxis:{
+              }
+           };
+          
+          //Here plotting starts 
+          Plotly.plot("chart", [{
+              y: [GetFreeRamPer()],
+              type: "line",
+          }], layout);
+          
+          var cnt = 0;
+          var points_to_relay = 40;
+          var intervalTime = 100;
+
+          setInterval(function(){
+
+              Plotly.extendTraces("chart", { y: [[GetFreeRamPer()]] }, [0]);
+              cnt++;
+
+              if(cnt > points_to_relay){
+
+                  Plotly.relayout("chart", {
+                      
+                      xaxis: {
+                          range: [cnt-points_to_relay, cnt]
+                      }
+                  });
+              }
+
+          }, intervalTime);
+
+        </script>
+        
+    </body>
+
+</html>
