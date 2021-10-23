@@ -1,0 +1,32 @@
+#fmemper{
+    
+    position: absolute;
+    font-family: 'Lucida Sans';
+    left: 68px;
+    top: 25px;
+    font-size: 30px;
+    color: rgb(53, 53, 168);
+
+}
+
+#cpuusageval{
+
+    position: absolute;
+    font-family: 'Lucida Sans';
+    left: 252px;
+    top: 600px;
+    font-size: 30px;
+    color: rgb(53, 53, 168);
+
+}
+
+#cpuusagetext{
+
+    position: absolute;
+    font-family: 'Lucida Sans';
+    left: 68px;
+    top: 600px;
+    font-size: 30px;
+    color: rgb(53, 53, 168);
+
+}
