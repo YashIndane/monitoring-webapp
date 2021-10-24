@@ -30,3 +30,47 @@
     color: rgb(53, 53, 168);
 
 }
+
+#wrspeedgetext{
+
+    position: absolute;
+    font-family: 'Lucida Sans';
+    left: 650px;
+    top: 25px;
+    font-size: 30px;
+    color: rgb(53, 53, 168);
+
+}
+
+#respeedgetext{
+
+    position: absolute;
+    font-family: 'Lucida Sans';
+    left: 650px;
+    top: 75px;
+    font-size: 30px;
+    color: rgb(53, 53, 168);
+
+}
+
+#wrspeedval{
+   
+    position: absolute;
+    font-family: 'Lucida Sans';
+    left: 850px;
+    top: 25px;
+    font-size: 30px;
+    color: rgb(53, 53, 168);
+
+}
+
+#respeedval{
+ 
+    position: absolute;
+    font-family: 'Lucida Sans';
+    left: 850px;
+    top: 75px;
+    font-size: 30px;
+    color: rgb(53, 53, 168);
+
+}
