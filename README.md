@@ -1,3 +1,4 @@
+![](https://img.shields.io/badge/-FastAPI-grey?style=for-the-badge&logo=fastapi) ![](https://img.shields.io/badge/-Python-grey?style=for-the-badge&logo=python)
 
 ![](https://github.com/YashIndane/repo-images/blob/main/monitor.gif)
 
