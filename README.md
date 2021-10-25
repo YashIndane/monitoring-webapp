@@ -1,6 +1,6 @@
 ## Requirements
 
-Requirements are mentioned in `requirements.txt`, Install by -
+Requirements are mentioned in [requirements.txt](https://github.com/YashIndane/monitoring-webapp/blob/main/requirements.txt), Install by -
 
 ```
 $ pip3 install -r requirements.txt
