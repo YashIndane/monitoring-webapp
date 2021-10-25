@@ -17,3 +17,65 @@ Run by -
 ```
 $ uvicorn app:monitor_app --host 0.0.0.0 --port <PORT> --reload
 ```
+
+## Configuration on System to be monitored
+
+Install `httpd` and `sysstat` by -
+
+```
+$ yum install httpd sysstat
+```
+
+Start the httpd service by `$ systemctl start httpd`.
+
+Have this files in `/var/www/cgi-bin` directory -
+
+Have this lines of code at beginning of each file
+
+```py
+#!/usr/bin/python3
+
+from subprocess import getstatusoutput as gso
+import cgi
+
+print("content-type:text/plain")
+print("Access-Control-Allow-Origin: *")
+print()
+```
+
+`getfreemem.py`
+
+```py
+free_mem = int(gso("free -m | grep 'Mem:' | awk '{ print $4 }'")[1])
+total_mem = int(gso("free -m | grep 'Mem:' | awk '{ print $2 }'")[1])
+percent_free = (free_mem * 100 ) / total_mem
+print(percent_free)
+```
+
+`getreadspeed.py`
+
+```py
+read_speed = gso("iostat | grep sda | awk '{ print $3 }'")[1]
+print(read_speed)
+```
+
+`getwrspeed.py`
+
+```py
+write_speed = gso("iostat | grep sda | awk '{ print $4 }'")[1]
+print(write_speed)
+
+```
+
+`getcpuuse.py`
+
+```py
+cpu = gso("mpstat | grep all | awk '{ print $3 }'")[1]
+print(cpu)
+```
+
+Make above files executable by-
+
+```
+$ chmod +x <FILE-NAME>
+```
