@@ -1,3 +1,6 @@
+
+![](https://github.com/YashIndane/repo-images/blob/main/monitor.gif)
+
 ## Requirements
 
 Requirements are mentioned in [requirements.txt](https://github.com/YashIndane/monitoring-webapp/blob/main/requirements.txt), Install by -

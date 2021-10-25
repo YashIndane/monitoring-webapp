@@ -15,7 +15,7 @@ setInterval(function(){
     }
 
     var xhr2 = new XMLHttpRequest;
-    var queryString2 = "http://<IP>.254/cgi-bin/getwrspeed.py";
+    var queryString2 = "http://<IP>/cgi-bin/getwrspeed.py";
     xhr2.open("GET", queryString2, true);
     xhr2.send();
     
