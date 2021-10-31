@@ -2,6 +2,8 @@
 
 ![](https://github.com/YashIndane/repo-images/blob/main/monitor.gif)
 
+[demo](https://www.linkedin.com/posts/yash-indane-aa6534179_fastapi-monitoring-softwaredevelopement-activity-6860459061431828480-HdIu)
+
 ## Requirements
 
 Requirements are mentioned in [requirements.txt](https://github.com/YashIndane/monitoring-webapp/blob/main/requirements.txt), Install by -
