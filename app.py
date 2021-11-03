@@ -13,4 +13,4 @@ monitor_app.mount("/static", StaticFiles(directory="static"), name="static")
 
 @monitor_app.get("/freemem", response_class=HTMLResponse)
 def get_free_mem(request:Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+    return templates.TemplateResponse("index.html", {"request":request})
