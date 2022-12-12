@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/-FastAPI-grey?style=for-the-badge&logo=fastapi) ![](https://img.shields.io/badge/-Python-grey?style=for-the-badge&logo=python)
 
-![](https://github.com/YashIndane/repo-images/blob/main/monitor.gif)
+![monitor](https://user-images.githubusercontent.com/53041219/207018446-d23043bd-7832-4157-8cd3-26bfa634fbc1.gif)
 
 [demo](https://www.linkedin.com/posts/yash-indane-aa6534179_fastapi-monitoring-softwaredevelopement-activity-6860459061431828480-HdIu)
 
